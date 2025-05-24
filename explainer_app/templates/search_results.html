@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h2>Search Query:</h2>
+    <p>{{ query }}</p>
+
+    <h3>Top Code Chunks:</h3>
+    <ul>
+        {% for chunk in chunks %}
+            <li><pre>{{ chunk }}</pre></li>
+        {% endfor %}
+    </ul>
+
+    <h3>Gemini Answer:</h3>
+    <pre>{{ answer }}</pre>
+
+    <a href="{% url 'upload_file' %}">← Back</a>
+</body>
+</html>
+
